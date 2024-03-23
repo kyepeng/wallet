@@ -70,13 +70,24 @@ Wallet
 				"method": "POST",
 				"header": [],
 				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"first_name\": \"test\",\r\n    \"last_name\": \"Test\",\r\n    \"full_address\": \"test\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "first_name",
+							"value": "First",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Last",
+							"type": "text"
+						},
+						{
+							"key": "full_address",
+							"value": "Full Address",
+							"type": "text"
 						}
-					}
+					]
 				},
 				"url": {
 					"raw": "http://localhost:8080/api/customers",
@@ -103,7 +114,17 @@ Wallet
 					"urlencoded": [
 						{
 							"key": "first_name",
-							"value": "updated",
+							"value": "Updated First",
+							"type": "text"
+						},
+						{
+							"key": "last_name",
+							"value": "Updated Last",
+							"type": "text"
+						},
+						{
+							"key": "full_address",
+							"value": "Updated Address",
 							"type": "text"
 						}
 					]
@@ -173,7 +194,13 @@ Wallet
 				"header": [],
 				"body": {
 					"mode": "urlencoded",
-					"urlencoded": []
+					"urlencoded": [
+						{
+							"key": "amount",
+							"value": "100",
+							"type": "text"
+						}
+					]
 				},
 				"url": {
 					"raw": "http://localhost:8080/api/wallets/topup/1",
@@ -208,7 +235,7 @@ Wallet
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/wallets/pay/2",
+					"raw": "http://localhost:8080/api/wallets/pay/1",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -218,7 +245,7 @@ Wallet
 						"api",
 						"wallets",
 						"pay",
-						"2"
+						"1"
 					]
 				}
 			},
