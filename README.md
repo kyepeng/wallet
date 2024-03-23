@@ -19,6 +19,9 @@ Execute in Wallet-App container:
 Run the database migrations:
 ```php artisan migrate```
 
+If error, unable to copy files over, go to the project folder:
+``` docker cp . wallet-app:/var/www; docker exec wallet-app chown -R www-data:www-data /var/www/storage; docker exec wallet-app  chmod -R 775 /var/www/storage ```
+
 ## Feature
 Customers
 - Create
